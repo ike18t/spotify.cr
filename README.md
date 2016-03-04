@@ -11,6 +11,17 @@ dependencies:
     github: marceloboeira/spotify.cr
 ```
 
+## Usage
+
+### Track
+
+```crystal
+require "spotify"
+
+puts Spotify::Track.find("23MrkN7g6Q5U7GLIxNHN1B").name
+# => Foxey Lady
+```
+
 ## Contributing
 
 1. Fork it (https://github.com/marceloboeira/spotify.cr/fork)
