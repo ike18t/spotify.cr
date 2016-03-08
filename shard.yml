@@ -1,9 +1,7 @@
 name: spotify
 version: 0.0.0
-
 authors:
   - Marcelo Boeira <me@marceloboeira.com>
-
 license: MIT
 
 development_dependencies:
