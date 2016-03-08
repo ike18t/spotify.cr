@@ -1,4 +1,4 @@
-# spotify.cr
+# spotify.cr [![Build Status](https://travis-ci.org/marceloboeira/spotify.cr.svg?branch=master)](https://travis-ci.org/marceloboeira/spotify.cr)
 > A Crystal wrapper for the Spotify API
 
 ## Installation
