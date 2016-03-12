@@ -3,10 +3,11 @@ require "http/client"
 
 module Spotify
   class Track
-    getter :id, :name
+    getter :id, :name, :popularity
     JSON.mapping({
       id:  String,
-      name: String
+      name: String,
+      popularity: Int32
     })
 
     def self.find(id : String)

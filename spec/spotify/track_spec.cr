@@ -22,5 +22,9 @@ describe Spotify::Track do
     it "populates the name" do
       track.name.should eq("Purple Haze")
     end
+
+    it "populates the popularity" do
+      track.popularity.should eq(68)
+    end
   end
 end
