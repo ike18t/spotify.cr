@@ -2,9 +2,9 @@ module Spotify
   class Track
     getter :id, :name, :popularity
     JSON.mapping({
-      id:  String,
+      id: String,
       name: String,
-      popularity: Int32
+      popularity: Int32,
     })
 
     def self.find(id : String)
