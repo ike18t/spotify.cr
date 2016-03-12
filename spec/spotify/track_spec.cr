@@ -3,11 +3,14 @@ require "./../spec_helper"
 describe Spotify::Track do
   let(response) { Fixture.load("track.json") }
 
-  context "when finding" do
-    it "finds a track by id" do
-      WebMock.stub(:get, "https://api.spotify.com/v1/tracks/0wJoRiX5K5BxlqZTolB2LD").to_return(response)
-      track = Spotify::Track.find("0wJoRiX5K5BxlqZTolB2LD")
+  before do
+    WebMock.stub(:get, "https://api.spotify.com/v1/tracks/0wJoRiX5K5BxlqZTolB2LD").to_return(response)
+  end
 
+  context "when finding" do
+    let(track) { Spotify::Track.find("0wJoRiX5K5BxlqZTolB2LD") }
+
+    it "finds a track by id" do
       expect(track.name).to eq("Purple Haze")
     end
   end
