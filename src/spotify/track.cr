@@ -1,6 +1,3 @@
-require "json"
-require "http/client"
-
 module Spotify
   class Track
     getter :id, :name, :popularity
