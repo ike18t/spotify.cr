@@ -1,23 +1,23 @@
 {
-  "id" : "7rSZXXHHvIhF4yUFdaOCy9",
-  "name" : "Are You Experienced",
-  "popularity" : 73,
-  "href" : "https://api.spotify.com/v1/albums/7rSZXXHHvIhF4yUFdaOCy9",
-  "images" : [
+  "id": "7rSZXXHHvIhF4yUFdaOCy9",
+  "name": "Are You Experienced",
+  "popularity": 73,
+  "href": "https://api.spotify.com/v1/albums/7rSZXXHHvIhF4yUFdaOCy9",
+  "images": [
     {
-      "height" : 640,
-      "url" : "https://i.scdn.co/image/1d55f445789ed89a1b8fab09c3dad117afb5fe80",
-      "width" : 640
+      "height": 640,
+      "url": "https://i.scdn.co/image/1d55f445789ed89a1b8fab09c3dad117afb5fe80",
+      "width": 640
     },
     {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/ee7ad063dd7d544a9ba10fcb55545dd6b0da0ba6",
-      "width" : 300
+      "height": 300,
+      "url": "https://i.scdn.co/image/ee7ad063dd7d544a9ba10fcb55545dd6b0da0ba6",
+      "width": 300
     },
     {
-      "height" : 64,
-      "url" : "https://i.scdn.co/image/cec8d097976331ea8acbb93182258f2ae0119f71",
-      "width" : 64
+      "height": 64,
+      "url": "https://i.scdn.co/image/cec8d097976331ea8acbb93182258f2ae0119f71",
+      "width": 64
     }
   ]
 }

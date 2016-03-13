@@ -1,28 +1,28 @@
 {
-  "id" : "776Uo845nYHJpNaStv1Ds4",
-  "name" : "Jimi Hendrix",
-  "popularity" : 74,
-  "href" : "https://api.spotify.com/v1/artists/776Uo845nYHJpNaStv1Ds4",
-  "images" : [
+  "id": "776Uo845nYHJpNaStv1Ds4",
+  "name": "Jimi Hendrix",
+  "popularity": 74,
+  "href": "https://api.spotify.com/v1/artists/776Uo845nYHJpNaStv1Ds4",
+  "images": [
     {
-      "height" : 1500,
-      "url" : "https://i.scdn.co/image/080183498389e920416d15d00b34f4c5dc4bbd0b",
-      "width" : 1000
+      "height": 1500,
+      "url": "https://i.scdn.co/image/080183498389e920416d15d00b34f4c5dc4bbd0b",
+      "width": 1000
     },
     {
-      "height" : 960,
-      "url" : "https://i.scdn.co/image/ac83b1e22aa158ce554f27b26751354c8b525dee",
-      "width" : 640
+      "height": 960,
+      "url": "https://i.scdn.co/image/ac83b1e22aa158ce554f27b26751354c8b525dee",
+      "width": 640
     },
     {
-      "height" : 300,
-      "url" : "https://i.scdn.co/image/a5f86ee01b063916de2b636f44f1dfccd540a786",
-      "width" : 200
+      "height": 300,
+      "url": "https://i.scdn.co/image/a5f86ee01b063916de2b636f44f1dfccd540a786",
+      "width": 200
     },
     {
-      "height" : 96,
-      "url" : "https://i.scdn.co/image/577c11dbd9c88cf8872c938d2ce85d0a699a7c02",
-      "width" : 64
+      "height": 96,
+      "url": "https://i.scdn.co/image/577c11dbd9c88cf8872c938d2ce85d0a699a7c02",
+      "width": 64
     }
   ]
 }
