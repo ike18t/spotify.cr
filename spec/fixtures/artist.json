@@ -1,5 +1,6 @@
 {
   "id" : "776Uo845nYHJpNaStv1Ds4",
   "name" : "Jimi Hendrix",
-  "popularity" : 74
+  "popularity" : 74,
+  "href" : "https://api.spotify.com/v1/artists/776Uo845nYHJpNaStv1Ds4"
 }

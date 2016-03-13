@@ -29,5 +29,9 @@ describe Spotify::Artist do
     it "populates the popularity" do
       expect(artist.popularity).to eq(74)
     end
+
+    it "populates the href" do
+      expect(artist.href).to eq("https://api.spotify.com/v1/artists/776Uo845nYHJpNaStv1Ds4")
+    end
   end
 end

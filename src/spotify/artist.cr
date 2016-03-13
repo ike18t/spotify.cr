@@ -1,10 +1,11 @@
 module Spotify
   class Artist
-    getter :id, :name, :popularity
+    getter :id, :name, :popularity, :href
     JSON.mapping({
       id: String,
       name: String,
-      popularity: Int32
+      popularity: Int32,
+      href: String
     })
 
     def self.find(id : String)
