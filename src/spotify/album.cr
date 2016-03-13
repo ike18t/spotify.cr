@@ -1,6 +1,5 @@
 module Spotify
   class Album
-    getter :id, :name, :popularity, :href
     JSON.mapping({
       id: String,
       name: String,
