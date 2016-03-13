@@ -29,5 +29,9 @@ describe Spotify::Album do
     it "populates the popularity" do
       expect(album.popularity).to eq(73)
     end
+
+    it "populates the href" do
+      expect(album.href).to eq("https://api.spotify.com/v1/albums/7rSZXXHHvIhF4yUFdaOCy9")
+    end
   end
 end

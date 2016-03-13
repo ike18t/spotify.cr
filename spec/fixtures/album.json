@@ -1,5 +1,6 @@
 {
   "id" : "7rSZXXHHvIhF4yUFdaOCy9",
   "name" : "Are You Experienced",
-  "popularity" : 73
+  "popularity" : 73,
+  "href" : "https://api.spotify.com/v1/albums/7rSZXXHHvIhF4yUFdaOCy9"
 }
