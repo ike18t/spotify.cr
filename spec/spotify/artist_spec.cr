@@ -25,5 +25,9 @@ describe Spotify::Artist do
     it "populates the name" do
       expect(artist.name).to eq("Jimi Hendrix")
     end
+
+    it "populates the popularity" do
+      expect(artist.popularity).to eq(74)
+    end
   end
 end
