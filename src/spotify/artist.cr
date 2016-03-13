@@ -1,5 +1,5 @@
 module Spotify
-  class Track
+  class Artist
     getter :id, :name, :popularity
     JSON.mapping({
       id: String,
@@ -8,7 +8,7 @@ module Spotify
     })
 
     def self.find(id : String)
-      response = HTTP::Client.get("https://api.spotify.com/v1/tracks/#{id}")
+      response = HTTP::Client.get("https://api.spotify.com/v1/artists/#{id}")
 
       return from_json(response.body)
     end

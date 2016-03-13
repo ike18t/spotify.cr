@@ -30,3 +30,13 @@ require "spotify"
 puts Spotify::Album.find("7rSZXXHHvIhF4yUFdaOCy9").name
 # => Are You Experienced
 ```
+
+### Artist
+
+```crystal
+require "spotify"
+
+puts Spotify::Artist.find("776Uo845nYHJpNaStv1Ds4").name
+# => Jimi Hendrix
+```
+
