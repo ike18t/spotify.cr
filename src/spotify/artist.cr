@@ -8,7 +8,7 @@ module Spotify
       name: String,
       popularity: Int32,
       href: String,
-      images: Array(Spotify::Image)
+      images: Array(Image)
     })
   end
 end
