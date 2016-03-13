@@ -33,5 +33,10 @@ describe Spotify::Artist do
     it "populates the href" do
       expect(artist.href).to eq("https://api.spotify.com/v1/artists/776Uo845nYHJpNaStv1Ds4")
     end
+
+    it "populates the images" do
+      expect(artist.images.size).to eq(4)
+      expect(artist.images).to be_a(Array(Spotify::Image))
+    end
   end
 end

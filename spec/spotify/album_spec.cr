@@ -33,5 +33,10 @@ describe Spotify::Album do
     it "populates the href" do
       expect(album.href).to eq("https://api.spotify.com/v1/albums/7rSZXXHHvIhF4yUFdaOCy9")
     end
+
+    it "populates the image" do
+      expect(album.images.size).to eq(3)
+      expect(album.images).to be_a(Array(Spotify::Image))
+    end
   end
 end

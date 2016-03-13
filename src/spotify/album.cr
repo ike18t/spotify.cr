@@ -5,7 +5,8 @@ module Spotify
       id: String,
       name: String,
       popularity: Int32,
-      href: String
+      href: String,
+      images: Array(Spotify::Image)
     })
 
     def self.find(id : String)
