@@ -4,10 +4,10 @@ module Spotify
   class Track < Resource
     @@resource = "tracks"
     JSON.mapping({
-      id: String,
-      name: String,
+      id:         String,
+      name:       String,
       popularity: Int32,
-      href: String
+      href:       String,
     })
   end
 end

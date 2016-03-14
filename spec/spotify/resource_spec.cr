@@ -3,8 +3,8 @@ require "./../spec_helper"
 class Foo < Spotify::Resource
   @@resource = "foos"
   JSON.mapping({
-    id: String,
-    lorem: String
+    id:    String,
+    lorem: String,
   })
 end
 
