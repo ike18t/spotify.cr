@@ -38,5 +38,10 @@ describe Spotify::Artist do
       expect(artist.images.size).to eq(4)
       expect(artist.images).to be_a(Array(Spotify::Image))
     end
+
+    it "populates the genres" do
+      expect(artist.genres.size).to eq(2)
+      expect(artist.genres).to be_a(Array(String))
+    end
   end
 end

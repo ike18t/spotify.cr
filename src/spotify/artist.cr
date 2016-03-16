@@ -9,6 +9,7 @@ module Spotify
       popularity: Int32,
       href:       String,
       images:     Array(Image),
+      genres:     Array(String),
     })
   end
 end
