@@ -42,6 +42,7 @@ describe Spotify::Artist do
     it "populates the genres" do
       expect(artist.genres.size).to eq(2)
       expect(artist.genres).to be_a(Array(String))
+      expect(artist.genres[0]).to eq("blues-rock")
     end
   end
 end
