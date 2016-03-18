@@ -33,5 +33,9 @@ describe Spotify::Track do
     it "populates the href" do
       expect(track.href).to eq("https://api.spotify.com/v1/tracks/0wJoRiX5K5BxlqZTolB2LD")
     end
+
+    it "populates the track number" do
+      expect(track.track_number).to eq(2)
+    end
   end
 end
