@@ -1,5 +1,5 @@
 require "json"
 require "http/client"
-require "./spotify/*"
+require "./spotify/**"
 
 module Spotify; end
