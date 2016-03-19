@@ -35,9 +35,9 @@ module Spotify
       href:     String,
       items:    Array(AlbumTrack),
       limit:    Int32,
-      next:     { type: String, nilable: true },
+      next:     {type: String, nilable: true},
       offset:   Int32,
-      previous: { type: String, nilable: true },
+      previous: {type: String, nilable: true},
       total:    Int32,
     })
   end
@@ -65,4 +65,3 @@ module Spotify
     })
   end
 end
-

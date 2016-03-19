@@ -73,38 +73,38 @@ describe Spotify::Album do
       expect(album.images).to be_a(Array(Spotify::Image))
     end
 
-    it "should populate release_date" do
+    it "populates release_date" do
       expect(album.release_date).to be_a(String)
       expect(album.release_date).to eq("1983")
     end
 
-    it "should populate release_date_precision" do
+    it "populates release_date_precision" do
       expect(album.release_date_precision).to be_a(String)
       expect(album.release_date_precision).to eq("year")
     end
 
-    it "should populate tracks" do
+    it "populates tracks" do
       expect(album.tracks).to be_a(Spotify::AlbumTracks)
-      expect(album.tracks.items).to    be_a(Array(Spotify::AlbumTrack))
-      expect(album.tracks.limit).to    be_a(Int32)
-      expect(album.tracks.next).to     be_a(Nil)
-      expect(album.tracks.offset).to   be_a(Int32)
+      expect(album.tracks.items).to be_a(Array(Spotify::AlbumTrack))
+      expect(album.tracks.limit).to be_a(Int32)
+      expect(album.tracks.next).to be_a(Nil)
+      expect(album.tracks.offset).to be_a(Int32)
       expect(album.tracks.previous).to be_a(Nil)
-      expect(album.tracks.total).to    be_a(Int32)
+      expect(album.tracks.total).to be_a(Int32)
 
-      expect(album.tracks.limit).to    eq(50)
-      expect(album.tracks.next).to     eq(nil)
-      expect(album.tracks.offset).to   eq(0)
+      expect(album.tracks.limit).to eq(50)
+      expect(album.tracks.next).to eq(nil)
+      expect(album.tracks.offset).to eq(0)
       expect(album.tracks.previous).to eq(nil)
-      expect(album.tracks.total).to    eq(13)
+      expect(album.tracks.total).to eq(13)
     end
 
-    it "should populate type" do
+    it "populates type" do
       expect(album.type).to be_a(String)
       expect(album.type).to eq("album")
     end
 
-    it "should populate uri" do
+    it "populates uri" do
       expect(album.uri).to be_a(String)
       expect(album.uri).to eq("spotify:album:0sNOF9WDwhWunNAHPD3Baj")
     end
