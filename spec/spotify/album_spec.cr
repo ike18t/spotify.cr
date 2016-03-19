@@ -22,32 +22,32 @@ describe Spotify::Album do
       expect(album.album_type).to eq("album")
     end
 
-    it "should populate artists" do
+    it "populate artists" do
       expect(album.artists).to be_a(Array(Spotify::AlbumArtist))
     end
 
-    it "should populate available_markets" do
+    it "populate available_markets" do
       expect(album.available_markets).to be_a(Array(String))
     end
 
-    it "should populate copyrights" do
+    it "populate copyrights" do
       expect(album.copyrights).to be_a(Array(Hash(String, String)))
       expect(album.copyrights.size).to eq(1)
       expect(album.copyrights.first["text"]).to eq("(P) 2000 Sony Music Entertainment Inc.")
       expect(album.copyrights.first["type"]).to eq("P")
     end
 
-    it "should populate external_ids" do
+    it "populate external_ids" do
       expect(album.external_ids).to be_a(Hash(String, String))
       expect(album.external_ids["upc"]).to eq("5099749994324")
     end
 
-    it "should populate external_urls" do
+    it "populate external_urls" do
       expect(album.external_urls).to be_a(Hash(String, String))
       expect(album.external_urls["spotify"]).to eq("https://open.spotify.com/album/0sNOF9WDwhWunNAHPD3Baj")
     end
 
-    it "should populate genres" do
+    it "populate genres" do
       expect(album.genres).to be_a(Array(String))
       expect(album.genres.empty?).to be_true
     end
