@@ -32,6 +32,7 @@ module Spotify
       artists:           Array(TrackArtist),
       available_markets: Array(String),
       disc_number:       Int32,
+      duration_ms:       Int32,
       id:                String,
       name:              String,
       popularity:        Int32,
