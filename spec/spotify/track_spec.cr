@@ -87,5 +87,10 @@ describe Spotify::Track do
       expect(track.type).to be_a(String)
       expect(track.type).to eq("track")
     end
+
+    it "populates uri" do
+      expect(track.uri).to be_a(String)
+      expect(track.uri).to eq("spotify:track:0eGsygTp906u18L0Oimnem")
+    end
   end
 end
