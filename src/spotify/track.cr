@@ -37,6 +37,7 @@ module Spotify
       external_ids:      Hash(String, String),
       external_urls:     Hash(String, String),
       preview_url:       String,
+      type:              String,
       id:                String,
       name:              String,
       popularity:        Int32,

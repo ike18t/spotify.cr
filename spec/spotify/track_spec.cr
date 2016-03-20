@@ -82,5 +82,10 @@ describe Spotify::Track do
     it "populates the track number" do
       expect(track.track_number).to eq(2)
     end
+
+    it "populates type" do
+      expect(track.type).to be_a(String)
+      expect(track.type).to eq("track")
+    end
   end
 end
