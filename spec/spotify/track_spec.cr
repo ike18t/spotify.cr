@@ -28,6 +28,11 @@ describe Spotify::Track do
       expect(track.artists.size).to eq(1)
     end
 
+    it "populates available_markets" do
+      expect(track.available_markets).to be_a(Array(String))
+      expect(track.available_markets.size).to eq(4)
+    end
+
     it "populates the id" do
       expect(track.id).to eq("0eGsygTp906u18L0Oimnem")
     end

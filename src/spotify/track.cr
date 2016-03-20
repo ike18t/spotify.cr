@@ -28,13 +28,14 @@ module Spotify
   class Track < Resource
     @@resource = "tracks"
     JSON.mapping({
-      album:        TrackAlbum,
-      artists:      Array(TrackArtist),
-      id:           String,
-      name:         String,
-      popularity:   Int32,
-      href:         String,
-      track_number: Int32,
+      album:             TrackAlbum,
+      artists:           Array(TrackArtist),
+      available_markets: Array(String),
+      id:                String,
+      name:              String,
+      popularity:        Int32,
+      href:              String,
+      track_number:      Int32,
     })
   end
 end
