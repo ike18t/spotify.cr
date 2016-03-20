@@ -70,6 +70,11 @@ describe Spotify::Track do
       expect(track.popularity).to eq(0)
     end
 
+    it "populates preview_url" do
+      expect(track.preview_url).to be_a(String)
+      expect(track.preview_url).to eq("http://d318706lgtcm8e.cloudfront.net/mp3-preview/f454c8224828e21fa146af84916fd22cb89cedc6")
+    end
+
     it "populates the href" do
       expect(track.href).to eq("https://api.spotify.com/v1/tracks/0eGsygTp906u18L0Oimnem")
     end

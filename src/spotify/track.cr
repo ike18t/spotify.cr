@@ -36,6 +36,7 @@ module Spotify
       explicit:          Bool,
       external_ids:      Hash(String, String),
       external_urls:     Hash(String, String),
+      preview_url:       String,
       id:                String,
       name:              String,
       popularity:        Int32,
