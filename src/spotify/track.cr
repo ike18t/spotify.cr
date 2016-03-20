@@ -14,10 +14,22 @@ module Spotify
     })
   end
 
+  class TrackArtist
+    JSON.mapping({
+      external_urls: Hash(String, String),
+      href:          String,
+      id:            String,
+      name:          String,
+      type:          String,
+      uri:           String,
+    })
+  end
+
   class Track < Resource
     @@resource = "tracks"
     JSON.mapping({
       album:        TrackAlbum,
+      artists:      Array(TrackArtist),
       id:           String,
       name:         String,
       popularity:   Int32,

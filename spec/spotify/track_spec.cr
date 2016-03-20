@@ -23,6 +23,11 @@ describe Spotify::Track do
       expect(track.album.album_type).to eq("album")
     end
 
+    it "populates artists" do
+      expect(track.artists).to be_a(Array(Spotify::TrackArtist))
+      expect(track.artists.size).to eq(1)
+    end
+
     it "populates the id" do
       expect(track.id).to eq("0eGsygTp906u18L0Oimnem")
     end
