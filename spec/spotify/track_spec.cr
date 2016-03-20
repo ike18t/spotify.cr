@@ -53,6 +53,11 @@ describe Spotify::Track do
       expect(track.external_ids["isrc"]).to eq("USIR20400274")
     end
 
+    it "populates external_urls" do
+      expect(track.external_urls).to be_a(Hash(String, String))
+      expect(track.external_urls["spotify"]).to eq("https://open.spotify.com/track/0eGsygTp906u18L0Oimnem")
+    end
+
     it "populates the id" do
       expect(track.id).to eq("0eGsygTp906u18L0Oimnem")
     end
