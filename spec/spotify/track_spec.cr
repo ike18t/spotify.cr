@@ -43,6 +43,11 @@ describe Spotify::Track do
       expect(track.duration_ms).to eq(222075)
     end
 
+    it "populates explicit" do
+      expect(track.explicit).to be_a(Bool)
+      expect(track.explicit).to eq(false)
+    end
+
     it "populates the id" do
       expect(track.id).to eq("0eGsygTp906u18L0Oimnem")
     end

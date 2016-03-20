@@ -33,6 +33,7 @@ module Spotify
       available_markets: Array(String),
       disc_number:       Int32,
       duration_ms:       Int32,
+      explicit:          Bool,
       id:                String,
       name:              String,
       popularity:        Int32,
