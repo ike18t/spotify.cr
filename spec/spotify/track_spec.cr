@@ -18,6 +18,11 @@ describe Spotify::Track do
   context "when parsing from JSON" do
     let(track) { Spotify::Track.from_json(response) }
 
+    it "populates album" do
+      expect(track.album).to be_a(Spotify::TrackAlbum)
+      expect(track.album.album_type).to eq("album")
+    end
+
     it "populates the id" do
       expect(track.id).to eq("0eGsygTp906u18L0Oimnem")
     end
