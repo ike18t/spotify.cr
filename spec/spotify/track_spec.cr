@@ -33,6 +33,11 @@ describe Spotify::Track do
       expect(track.available_markets.size).to eq(4)
     end
 
+    it "populates disc_number" do
+      expect(track.disc_number).to be_a(Int32)
+      expect(track.disc_number).to eq(1)
+    end
+
     it "populates the id" do
       expect(track.id).to eq("0eGsygTp906u18L0Oimnem")
     end
