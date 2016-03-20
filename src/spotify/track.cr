@@ -34,6 +34,7 @@ module Spotify
       disc_number:       Int32,
       duration_ms:       Int32,
       explicit:          Bool,
+      external_ids:      Hash(String, String),
       id:                String,
       name:              String,
       popularity:        Int32,

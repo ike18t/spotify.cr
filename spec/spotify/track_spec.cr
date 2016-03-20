@@ -48,6 +48,11 @@ describe Spotify::Track do
       expect(track.explicit).to eq(false)
     end
 
+    it "populates external_ids" do
+      expect(track.external_ids).to be_a(Hash(String, String))
+      expect(track.external_ids["isrc"]).to eq("USIR20400274")
+    end
+
     it "populates the id" do
       expect(track.id).to eq("0eGsygTp906u18L0Oimnem")
     end
