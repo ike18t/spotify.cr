@@ -15,7 +15,6 @@ module Spotify
       url = [API_URL, path].join("/")
       response = HTTP::Client.get(url, authorization_headers)
 
-      puts response.body
       raise Exceptions::Generic.new("Something went wrong") unless response.success?
       response.body
     end
@@ -29,11 +28,11 @@ module Spotify
     def self.authenticate
       request_body = { grant_type: "client_credentials" }.to_json
 
-      authorization = Base64.strict_encode [ENV["CLIENT_ID"], ENV["CLIENT_SECRET"]].join(":")
+      authorization = Base64.strict_encode [Config.get_client_key, Config.get_client_secret].join(":")
       auth_header = HTTP::Headers { "Authorization" => "Basic #{authorization}", "Content-Type": "application/x-www-form-urlencoded" }
 
       response = HTTP::Client.post("https://accounts.spotify.com/api/token?grant_type=client_credentials", auth_header, "")
-      raise Exceptions::Generic.new("Unable to successfully request an auth ticket with the provided client credentials") unless response.success?
+      raise Exceptions::Unauthorized.new("Unable to successfully request an auth ticket with the provided client credentials") unless response.success?
       @@bearer_token = JSON.parse(response.body)["access_token"].to_s
     end
   end

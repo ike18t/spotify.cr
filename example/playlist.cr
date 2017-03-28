@@ -1,5 +1,7 @@
 require "./../src/spotify"
 
+Spotify::Config.set_credentials(ENV["CLIENT_ID"], ENV["CLIENT_SECRET"])
+
 playlist = Spotify::Playlist.find("1295855412", "7Co7hqxAQFSAV7bMtyCGp0")
 
 puts "Name: #{playlist.name}"
