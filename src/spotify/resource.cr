@@ -2,7 +2,7 @@ require "./resource"
 
 module Spotify
   class Resource
-    REQUIRES_AUTHORIZATION = ["playlists"]
+    REQUIRES_AUTHORIZATION = ["playlists", "users"]
     API_URL = "https://api.spotify.com/v1"
     @@bearer_token = ""
 
