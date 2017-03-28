@@ -3,6 +3,7 @@ require "./resource"
 module Spotify
   class User < Resource
     @@resource = "users"
+    @@requires_auth = true
 
     JSON.mapping({
       display_name:  String,

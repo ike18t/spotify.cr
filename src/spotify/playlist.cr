@@ -3,6 +3,7 @@ require "./resource"
 module Spotify
   class Playlist < Resource
     @@resource = "playlists"
+    @@requires_auth = true
 
     def self.find(user_id : String, id : String)
       super id, "users/#{user_id}/playlists"

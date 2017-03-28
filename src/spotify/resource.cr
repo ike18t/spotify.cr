@@ -2,9 +2,9 @@ require "./resource"
 
 module Spotify
   class Resource
-    REQUIRES_AUTHORIZATION = ["playlists", "users"]
     API_URL = "https://api.spotify.com/v1"
     @@bearer_token = ""
+    @@requires_auth = false
 
     def self.find(id : String, resource_path = @@resource)
       response = get "#{resource_path}/#{id}"
@@ -20,14 +20,12 @@ module Spotify
     end
 
     def self.authorization_headers
-      return nil if !REQUIRES_AUTHORIZATION.includes?(@@resource)
+      return nil unless @@requires_auth
       authenticate if @@bearer_token.empty?
       HTTP::Headers { "Authorization" => "Bearer #{@@bearer_token}" }
     end
 
     def self.authenticate
-      request_body = { grant_type: "client_credentials" }.to_json
-
       authorization = Base64.strict_encode [Config.get_client_key, Config.get_client_secret].join(":")
       auth_header = HTTP::Headers { "Authorization" => "Basic #{authorization}", "Content-Type": "application/x-www-form-urlencoded" }
 
