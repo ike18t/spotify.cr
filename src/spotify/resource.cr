@@ -15,6 +15,11 @@ module Spotify
       url = [API_URL, path].join("/")
       response = HTTP::Client.get(url, authorization_headers)
 
+      if response.status_code == 401
+        authenticate
+        response = HTTP::Client.get(url, authorization_headers)
+      end
+
       raise Exceptions::Generic.new("Something went wrong") unless response.success?
       response.body
     end
