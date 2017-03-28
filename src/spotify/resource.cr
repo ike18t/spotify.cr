@@ -2,12 +2,39 @@ require "./resource"
 
 module Spotify
   class Resource
-    def self.find(id : String)
-      response = HTTP::Client.get("https://api.spotify.com/v1/#{@@resource}/#{id}")
-      
-      raise Exceptions::Generic.new("Something went wrong") unless response.success?
+    REQUIRES_AUTHORIZATION = ["playlists"]
+    API_URL = "https://api.spotify.com/v1"
+    @@bearer_token = ""
 
-      from_json(response.body)
+    def self.find(id : String, resource_path = @@resource)
+      response = get "#{resource_path}/#{id}"
+      from_json(response)
+    end
+
+    def self.get(path : String) : String
+      url = [API_URL, path].join("/")
+      response = HTTP::Client.get(url, authorization_headers)
+
+      puts response.body
+      raise Exceptions::Generic.new("Something went wrong") unless response.success?
+      response.body
+    end
+
+    def self.authorization_headers
+      return nil if !REQUIRES_AUTHORIZATION.includes?(@@resource)
+      authenticate if @@bearer_token.empty?
+      HTTP::Headers { "Authorization" => "Bearer #{@@bearer_token}" }
+    end
+
+    def self.authenticate
+      request_body = { grant_type: "client_credentials" }.to_json
+
+      authorization = Base64.strict_encode [ENV["CLIENT_ID"], ENV["CLIENT_SECRET"]].join(":")
+      auth_header = HTTP::Headers { "Authorization" => "Basic #{authorization}", "Content-Type": "application/x-www-form-urlencoded" }
+
+      response = HTTP::Client.post("https://accounts.spotify.com/api/token?grant_type=client_credentials", auth_header, "")
+      raise Exceptions::Generic.new("Unable to successfully request an auth ticket with the provided client credentials") unless response.success?
+      @@bearer_token = JSON.parse(response.body)["access_token"].to_s
     end
   end
 end
