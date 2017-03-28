@@ -16,7 +16,8 @@ module Spotify
       name:   String,
       owner:  PlaylistOwner,
       public: Bool,
-      tracks: PlaylistTracks
+      tracks: PlaylistTracks,
+      uri:    String
     })
 
     def tracks(limit = 100, offset = 0)
